@@ -55,7 +55,17 @@ with app.app_context():
     # query_1 = """ """
     # db.session.execute(text(query_1))
     # db.session.commit()
+    insert_query = '''
+    INSERT INTO Courses (course_name, course_description, credits) 
+    VALUES (?, ?, ?)
+'''
 
+# Data to insert (3 records)
+courses_data = [
+    ('Math 101', 'Basic Mathematics', 3),
+    ('Physics 101', 'Introduction to Physics', 4),
+    ('Chemistry 101', 'Basics of Chemistry', 3)
+]
     # # write a query to select all records from the Courses table
     # query_2 = """ """
     # courses = db.session.execute(text(query_2))
